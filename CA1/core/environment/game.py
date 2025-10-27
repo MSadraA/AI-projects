@@ -8,6 +8,9 @@ class PacmanGame:
         self.ghosts = deepcopy(ghosts)
         self.snacks = deepcopy(snacks)
         self.is_wall = is_wall
+        self.move_direction = move_direction
+        self.height = len(is_wall)
+        self.width = len(is_wall[0])
 
     """
         It returns a pair of move_direction and information for dynamic objects of the game.
@@ -76,7 +79,32 @@ class PacmanGame:
     """
         Use this method (or any defined method by yourself) to explore next possible states of the game.
     """
-    # TODO
+    def move_ghost(self, ghost):
+        next_x, next_y = ghost.get_next_position() 
+        new_direction = ghost.direction
+        
+        is_move_valid = True
+        
+        if ghost.is_horizontal():
+            if abs(next_y - ghost.center[1]) > ghost.radius:
+                is_move_valid = False
+        else:
+            if abs(next_x - ghost.center[0]) > ghost.radius:
+                is_move_valid = False
+        
+        if not self.is_valid(next_x, next_y):
+             is_move_valid = False
+
+        if not is_move_valid:
+            new_direction = ghost.direction * -1
+            
+            if ghost.is_horizontal():
+                next_x, next_y = ghost.x, ghost.y + new_direction
+            else:
+                next_x, next_y = ghost.x + new_direction, ghost.y
+
+        ghost.set_state(next_x, next_y, new_direction)
+
     def get_next_states(self):
         next_states = []
 
@@ -87,11 +115,59 @@ class PacmanGame:
             "R": (0, 1)
         }
 
+        current_goal_snack = self.determine_goal()
+        
+        (py, px) = self.player
+
+        for dir, (dy, dx) in moves.items():
+            
+            new_py, new_px = py + dy, px + dx
+            
+            if not self.is_valid(new_py, new_px):
+                continue
+            
+            collision = False
+            new_ghosts = deepcopy(self.ghosts)
+            for ghost in new_ghosts:
+                prev_gy, prev_gx = ghost.x, ghost.y
+                self.move_ghost(ghost)
+                new_gy, new_gx = ghost.x, ghost.y
+
+                if (new_py, new_px) == (new_gy, new_gx):
+                    collision = True
+                    break
+                
+                if (new_py, new_px) == (prev_gy, prev_gx) and (new_gy, new_gx) == (py, px):
+                    collision = True
+                    break
+
+            if collision:
+                continue
+            
+            new_snacks = deepcopy(self.snacks)
+            for snack in new_snacks:
+                
+                if snack.exists and (snack.x, snack.y) == (new_py, new_px) and snack.type == current_goal_snack:
+                    snack.exists = False
+   
+            new_state_game = PacmanGame(
+                player=(new_py, new_px),
+                ghosts=new_ghosts,
+                snacks=new_snacks,
+                is_wall=self.is_wall,
+                move_direction=dir
+            )
+            
+            next_states.append(new_state_game)                    
+
         return next_states
     
     """
         Use this method (or any defined method by yourself) to represent current state of the game.
     """
-    # TODO
     def get_state(self):
-        pass
+        player_pos = self.player
+        snack_status = tuple(s.exists for s in self.snacks)
+        ghost_states = tuple(sorted((g.x, g.y, g.direction) for g in self.ghosts))
+        return (player_pos, snack_status, ghost_states)
+    

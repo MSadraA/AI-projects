@@ -146,7 +146,7 @@ def main():
     
     pygame.mixer.init()
     pygame.mixer.music.load("assets/Music/17. Game Play.mp3")
-    pygame.mixer.music.set_volume(0.4)  # Adjust volume (0.0 - 1.0)
+    pygame.mixer.music.set_volume(0.0)  # Adjust volume (0.0 - 1.0)
     pygame.mixer.music.play(-1)  # -1 means loop forever
 
     clock = pygame.time.Clock()
