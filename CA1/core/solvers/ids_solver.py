@@ -1,3 +1,4 @@
+import sys
 from ..environment.game import PacmanGame
 from copy import deepcopy
 import time
@@ -8,33 +9,38 @@ import time
     It's recommended to use the earlier defined DFS function here.
 """
 
-def dls(game: PacmanGame, depth_limit: int , start_time , timeout):
-    init_path = [game.get_info()]
-    depth = 0
-    
-    visited = {game.get_state()}
-    
-    stack = [(depth, game, init_path , visited)]
+sys.setrecursionlimit(20000) # set recursion limit
 
-    while stack:
-        if(time.time() - start_time > timeout):
-            return "timeout"
-        
-        cur_depth, cur_node , cur_path , cur_visited = stack.pop()
+def dls_recursive(current_game, current_history, limit, path_visited_hashes, start_time, timeout):
+    if time.time() - start_time > timeout:
+        return "timeout"
 
-        if cur_node.is_goal():
-            return cur_path 
+    if current_game.is_goal():
+        return current_history
 
-        for child in cur_node.get_next_states():
-            child_hash = child.get_state()
-            if child_hash not in cur_visited:
-                child_depth = cur_depth + 1
-                if child_depth <= depth_limit:
-                    cur_visited = cur_visited.union({child_hash})
-                    child_path = cur_path + [child.get_info()]
-                    stack.append( ( child_depth, child, child_path , cur_visited) )
-    return None 
-    
+    if limit == 0:
+        return None
+
+    for next_game_state in current_game.get_next_states():
+        next_state_hash = next_game_state.get_state()
+
+        if next_state_hash not in path_visited_hashes:
+            
+            path_visited_hashes.add(next_state_hash)
+
+            new_history = current_history + [next_game_state.get_info()]
+            
+            result = dls_recursive( next_game_state, new_history, limit - 1, path_visited_hashes, start_time, timeout)
+            
+            path_visited_hashes.remove(next_state_hash)
+
+            if result == "timeout":
+                return "timeout"
+            if result is not None:
+                return result
+
+    return None
+
 def ids_solver(game: PacmanGame, max_limit: int = 1000, timeout=10):
     start_time = time.time()
     
@@ -43,7 +49,12 @@ def ids_solver(game: PacmanGame, max_limit: int = 1000, timeout=10):
             print("IDS Timeout")
             return [game.get_info()]
         
-        result = dls(game, i, start_time, timeout)
+        
+        initial_state_hash = game.get_state()
+        path_visited_hashes = {initial_state_hash} 
+        initial_history = [game.get_info()]
+        
+        result = dls_recursive(game ,initial_history ,i ,path_visited_hashes ,start_time ,timeout )
         
         if result == "timeout":
             print("IDS Timeout")
@@ -52,6 +63,6 @@ def ids_solver(game: PacmanGame, max_limit: int = 1000, timeout=10):
         if result is not None:
             print(f"IDS Goal Found at depth {i}!")
             return result
-
+        
     print("IDS No Solution Found (reached max_limit).")
     return None
