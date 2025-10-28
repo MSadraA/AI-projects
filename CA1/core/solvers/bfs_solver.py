@@ -2,38 +2,35 @@ from collections import deque
 from ..environment.game import PacmanGame
 import time
 
-"""
-    Use this method (or any defined method by yourself) to run BFS algorithm on a given 'game'.
-    At the end, you must return the walked path represented as a list of moves by using use PacmanGame.get_info()
-"""
 def bfs_solver(game: PacmanGame, timeout=10):
     start_time = time.time()
 
-    init_path = [game.get_info()]
-    node_queue = deque( [(game, init_path)] )
+    # Path starts with the initial state info
+    initial_path = [game.get_info()]
+    # Use deque as a queue (FIFO)
+    frontier = deque( [(game, initial_path)] )
 
-    visited = set()
-    visited.add(game.get_state())
+    # Keep track of visited states
+    explored_states = set()
+    explored_states.add(game.get_state())
 
-    while node_queue:
+    while frontier:
         if time.time() - start_time > timeout:
             print("BFS Timeout!")
-            return [game.get_info()] 
+            return [game.get_info()] # Signal timeout
 
-        cur_node, cur_path = node_queue.popleft()
+        current_state, path_so_far = frontier.popleft()
 
-        if cur_node.is_goal():
+        if current_state.is_goal():
             print("BFS Goal Found!")
-            return cur_path
+            return path_so_far
 
-        for child in cur_node.get_next_states():
-            
-            child_hash = child.get_state()
-            if child_hash not in visited:
-                visited.add(child_hash)
-                child_path = cur_path + [child.get_info()]
-                node_queue.append( (child, child_path) )
+        for next_state in current_state.get_next_states():
+            state_hash = next_state.get_state()
+            if state_hash not in explored_states:
+                explored_states.add(state_hash)
+                new_path = path_so_far + [next_state.get_info()]
+                frontier.append( (next_state, new_path) )
 
     print("BFS No Solution Found.")
     return None
-    

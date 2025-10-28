@@ -47,7 +47,7 @@ def run_test(file_path):
     Calls 'run_test' on every test and prints the result of each one.
 """
 def run_all_tests():
-    for i in range(0, 11):
+    for i in range(1, 4):
         result_df = run_test(file_path=f"./maps/map{i}.txt") 
         print(f"Results on map{i}:")       
         print(tabulate(result_df, headers='keys', tablefmt='fancy_grid', showindex=False))

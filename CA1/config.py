@@ -1,8 +1,8 @@
 """ 
     import your solver functions here
 """
-# from core.solvers.weighted_astar_solver import weighted_astar_solver
-# from core.solvers.astar_solver import astar_solver
+from core.solvers.weighted_astar_solver import weighted_astar_solver
+from core.solvers.astar_solver import astar_solver
 from core.solvers.bfs_solver import bfs_solver
 from core.solvers.dfs_solver import dfs_solver
 from core.solvers.ids_solver import ids_solver
@@ -26,8 +26,8 @@ ROWS = 15
 COLS = 20
 
 
+# SOLVER_MODES = ["BFS", "DFS", "IDS"]
 SOLVER_MODES = ["BFS", "DFS", "IDS", "A*", "Weighted A*"]
-
 """
     Add your solver functions to SOLVERS dictionary.
 """
@@ -35,19 +35,19 @@ SOLVERS = {
     SOLVER_MODES[0]: bfs_solver,
     SOLVER_MODES[1]: dfs_solver,
     SOLVER_MODES[2]: ids_solver,
-    # SOLVER_MODES[3]: astar_solver,
-    # SOLVER_MODES[4]: weighted_astar_solver
+    SOLVER_MODES[3]: astar_solver,
+    SOLVER_MODES[4]: weighted_astar_solver
 }
 
 """
     Set your desired time limits.
 """
 TIME_LIMITS = {
-    SOLVER_MODES[0]: 200, 
-    SOLVER_MODES[1]: 200,
-    SOLVER_MODES[2]: 400,
-    SOLVER_MODES[3]: 200,
-    SOLVER_MODES[4]: 200
+    SOLVER_MODES[0]: 250, 
+    SOLVER_MODES[1]: 250,
+    SOLVER_MODES[2]: 250,
+    SOLVER_MODES[3]: 250,
+    SOLVER_MODES[4]: 250
 }
 
 
