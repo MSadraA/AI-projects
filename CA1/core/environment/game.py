@@ -2,6 +2,7 @@ from copy import deepcopy
 from .ghost import Ghost
 from .snack import Snack
 
+
 class PacmanGame:
     def __init__(self, player : tuple[int, int], ghosts : list[Ghost], snacks : list[Snack], is_wall, move_direction = None):
         self.player = player
