@@ -62,7 +62,7 @@ def weighted_astar_calculator(initial_game: PacmanGame, heuristic_func, weight: 
     print("A* No Solution Found.")
     return None
 
-def weighted_astar_solver(game: PacmanGame, weight: int = 2, timeout=10):
+def weighted_astar_solver(game: PacmanGame, weight: int = 8, timeout=10):
     # heuristic_choice = heuristic_1
     heuristic_choice = heuristic_2 
     return weighted_astar_calculator(game, heuristic_choice, weight, timeout)

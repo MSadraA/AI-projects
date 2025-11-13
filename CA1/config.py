@@ -9,7 +9,7 @@ from core.solvers.ids_solver import ids_solver
 
 CELL_SIZE = 40
 AI_MODE_FPS = 3
-PLAYER_MODE_FPS = 100
+PLAYER_MODE_FPS = 120
 PLAYER_SPEED = 5
 P2G_SPEED = 1  # AI speed (moves/sec)
 GHOST_MOVE_LIMIT = 2 # Maximum number of cells a ghost can move
