@@ -1,0 +1,930 @@
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('row', [0, 1])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 0])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
+ Node d=1 | max=False | α=-inf | β=inf
+    Try ('col', [0, 0])
+    Node d=2 | max=True | α=-inf | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=-inf | β=inf
+          child=50 | α:-inf→50 | β=inf
+       child=50 | α=-inf | β:inf→50
+    Try ('col', [1, 0])
+    Node d=2 | max=True | α=-inf | β=50
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=-inf | β=50
+          child=50 | α:-inf→50 | β=50
+       ✂ Pruned because β(50) ≤ α(50)
+       child=50 | α=-inf | β:50→50
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [1, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=False | α=50 | β=inf
+    Try ('row', [0, 1])
+    Node d=2 | max=True | α=50 | β=inf
+       Try ('col', [0, 0])
+       Node d=3 | max=True | α=50 | β=inf
+          child=50 | α:50→50 | β=inf
+       child=50 | α=50 | β:inf→50
+    ✂ Pruned because β(50) ≤ α(50)
+ Node d=1 | max=True | α=-inf | β=inf
