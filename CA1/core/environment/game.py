@@ -169,6 +169,6 @@ class PacmanGame:
     def get_state(self):
         player_pos = self.player
         snack_status = tuple(s.exists for s in self.snacks)
-        ghost_states = tuple(sorted((g.x, g.y, g.direction) for g in self.ghosts))
+        ghost_states = tuple(sorted((g.x, g.y, g.direction, g.axis) for g in self.ghosts))
         return (player_pos, snack_status, ghost_states)
     
