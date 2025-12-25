@@ -1,0 +1,8 @@
+# fastText huge models
+cc.fa.300.bin
+cc.fa.300.vec
+cc.fa.300.txt
+*.pth
+*.tar
+*.txt
+snappfood/
